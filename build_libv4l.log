@@ -1,0 +1,213 @@
+make: Entering directory '/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot'
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_installed
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_staging_installed
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_target_installed
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_images_installed
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_host_installed
+rm -f /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_built
+v4l-utils-1.28.1.tar.xz: OK (sha256: 0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82)
+[7m>>> libv4l 1.28.1 Extracting[27m
+xzcat /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/dl/libv4l/v4l-utils-1.28.1.tar.xz | tar --strip-components=1 -C /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1   -xf -
+[7m>>> libv4l 1.28.1 Patching[27m
+[7m>>> libv4l 1.28.1 Configuring[27m
+rm -rf /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build
+mkdir -p /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build
+sed -e "/^\[binaries\]$/s:$::" -e "/^\[properties\]$/s:$::"         -e "s%@TARGET_CC@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc%g" -e "s%@TARGET_CXX@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-g++%g" -e "s%@TARGET_AR@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc-ar%g" -e "s%@TARGET_FC@%/bin/false%g" -e "s%@TARGET_STRIP@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-strip%g" -e "s%@TARGET_ARCH@%x86%g" -e "s%@TARGET_CPU@%%g" -e "s%@TARGET_ENDIAN@%little%g" -e "s%@TARGET_FCFLAGS@%%g" -e "s%@TARGET_CFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-D_TIME_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@TARGET_LDFLAGS@%%g" -e "s%@TARGET_CXXFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-D_TIME_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@BR2_CMAKE@%/usr/bin/cmake%g" -e "s%@PKGCONF_HOST_BINARY@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/pkgconf%g" -e "s%@HOST_DIR@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host%g" -e "s%@STAGING_DIR@%/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot%g" -e "s%@STATIC@%false%g" /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/support/misc/cross-compilation.conf.in > /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build/cross-compilation.conf
+PATH="/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin:/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/sbin:/home/a/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin" CC_FOR_BUILD="/usr/bin/gcc" CXX_FOR_BUILD="/usr/bin/g++"  PYTHONNOUSERSITE=y /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/meson setup --prefix=/usr --libdir=lib --default-library=shared --buildtype=release --cross-file=/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build/cross-compilation.conf -Db_pie=false -Db_staticpic=true -Dstrip=false -Dbuild.pkg_config_path=/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/lib/pkgconfig -Dbuild.cmake_prefix_path=/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/lib/cmake -Ddoxygen-doc=disabled -Dqvidcap=disabled -Dv4l2-tracer=disabled -Djpeg=disabled -Dlibdvbv5=disabled -Dv4l-utils=false /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/ /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build
+The Meson build system
+Version: 1.6.0
+Source dir: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1
+Build dir: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/build
+Build type: cross build
+Project name: v4l-utils
+Project version: 1.28.1
+C compiler for the host machine: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc (gcc 13.3.0 "i686-buildroot-linux-gnu-gcc.br_real (Buildroot 2024.08-1334-g11ae90b001) 13.3.0")
+C linker for the host machine: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc ld.bfd 2.42
+C++ compiler for the host machine: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-g++ (gcc 13.3.0 "i686-buildroot-linux-gnu-g++.br_real (Buildroot 2024.08-1334-g11ae90b001) 13.3.0")
+C++ linker for the host machine: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-g++ ld.bfd 2.42
+C compiler for the build machine: /usr/bin/gcc (gcc 13.2.0 "gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0")
+C linker for the build machine: /usr/bin/gcc ld.bfd 2.42
+C++ compiler for the build machine: /usr/bin/g++ (gcc 13.2.0 "g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0")
+C++ linker for the build machine: /usr/bin/g++ ld.bfd 2.42
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86
+Host machine cpu: 
+Target machine cpu family: x86
+Target machine cpu: 
+Compiler for C supports link arguments -m32: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports function attribute visibility:default: YES 
+Program bash found: YES (/usr/bin/bash)
+Program clang found: YES (/usr/bin/clang)
+Program doxygen skipped: feature doxygen-doc disabled
+Program grep found: YES (/usr/bin/grep)
+Program perl found: YES (/usr/bin/perl)
+Found pkg-config: YES (/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/pkgconf) 1.6.3
+Found CMake: /usr/bin/cmake (3.28.3)
+Run-time dependency alsa found: NO (tried pkgconfig and cmake)
+Run-time dependency gl found: NO (tried pkgconfig and system)
+Run-time dependency glu found: NO (tried pkgconfig and cmake)
+Dependency json-c skipped: feature v4l2-tracer disabled
+Library dl found: YES
+Library elf found: NO
+Library m found: YES
+Library rt found: YES
+qmake6 found: NO need ['>= 6', '< 7']
+Run-time dependency qt6 (modules: Core, Core5Compat, Gui, Widgets) found: NO (tried pkgconfig and config-tool)
+qmake5 found: NO need ['>= 5', '< 6']
+Run-time dependency qt5 (modules: Core, Gui, Widgets) found: NO (tried pkgconfig and config-tool)
+qmake5 found: NO need ['>= 5', '< 6']
+Run-time dependency qt5 (modules: OpenGL) found: NO (tried pkgconfig and config-tool)
+Run-time dependency libbpf found: NO (tried pkgconfig and cmake)
+sdl2-config found: NO
+Run-time dependency sdl2 found: NO (tried pkgconfig, config-tool and cmake)
+Has header "SDL2/SDL.h" : NO 
+Run-time dependency sdl2_image found: NO (tried pkgconfig and cmake)
+Has header "SDL2/SDL_image.h" : NO 
+Run-time dependency threads found: YES
+Run-time dependency x11 found: NO (tried pkgconfig and cmake)
+Run-time dependency xmlrpc found: NO (tried pkgconfig and cmake)
+Checking for function "fork" : YES 
+Has header "linux/i2c-dev.h" : YES 
+Checking for function "klogctl" : YES 
+Checking for function "secure_getenv" : YES 
+Checking for function "__secure_getenv" : NO 
+Has header "sys/klog.h" : YES 
+Header "execinfo.h" has symbol "backtrace" : YES 
+Checking for function "argp_parse" : YES 
+Checking for function "strerrorname_np" : YES 
+Run-time dependency iconv found: YES
+Has header "gconv.h" : YES 
+Library JIS found: YES
+Library JISX0213 found: YES
+Dependency libjpeg skipped: feature jpeg disabled
+Run-time dependency systemd found: NO (tried pkgconfig and cmake)
+Dependency libudev skipped: feature libdvbv5 disabled
+Run-time dependency udev found: NO (tried pkgconfig and cmake)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Configuring config.h using configuration
+Configuring v4l-utils.spec using configuration
+Build targets in project: 24
+
+v4l-utils 1.28.1
+
+  Dependencies
+    ALSA                   : NO
+    GL                     : NO
+    GLU                    : NO
+    JSON-C                 : NO
+    Qt5/Qt6                : NO
+                              without QtGL
+    SDL                    : NO
+    X11                    : NO
+    gconv                  : YES
+    iconv                  : YES
+    libjpeg                : NO
+    libudev                : NO
+    threads                : YES
+
+  Directories
+    udevdir                : /lib/udev
+
+  Libraries
+    libdvbv5               : NO
+    v4l-plugins            : YES
+    v4l-wrappers           : YES
+
+  Applications
+    BPF IR decoders        : NO
+    qv4l2                  : NO
+    qvidcap                : NO
+    v4l-utils              : NO
+    v4l2-compliance        : NO
+                             with libv4l
+    v4l2-compliance-32     : NO
+    v4l2-ctl               : NO
+                             with libv4l
+    v4l2-ctl-32            : NO
+    v4l2-tracer            : NO
+
+  User defined options
+    Cross files            : /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build/cross-compilation.conf
+    build.cmake_prefix_path: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/lib/cmake
+    build.pkg_config_path  : /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/lib/pkgconfig
+    b_pie                  : false
+    b_staticpic            : true
+    buildtype              : release
+    default_library        : shared
+    doxygen-doc            : disabled
+    jpeg                   : disabled
+    libdir                 : lib
+    libdvbv5               : disabled
+    prefix                 : /usr
+    qvidcap                : disabled
+    strip                  : false
+    v4l-utils              : false
+    v4l2-tracer            : disabled
+
+Found ninja-1.11.1.git.kitware.jobserver-1 at /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/ninja
+[7m>>> libv4l 1.28.1 Building[27m
+GIT_DIR=. PATH="/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin:/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/sbin:/home/a/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"  PYTHONNOUSERSITE=y /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/ninja   -C /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build
+ninja: Entering directory `/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build'
+[1/60] Building translation libdvbv5-po/ca/LC_MESSAGES/libdvbv5-ca.mo
+[2/60] Building translation libdvbv5-po/uk/LC_MESSAGES/libdvbv5-uk.mo
+[3/60] Building translation libdvbv5-po/pt_BR/LC_MESSAGES/libdvbv5-pt_BR.mo
+[4/60] Building translation libdvbv5-po/de/LC_MESSAGES/libdvbv5-de.mo
+[5/60] Building translation v4l-utils-po/ca/LC_MESSAGES/v4l-utils-ca.mo
+[6/60] Building translation v4l-utils-po/fr/LC_MESSAGES/v4l-utils-fr.mo
+[7/60] Building translation v4l-utils-po/de/LC_MESSAGES/v4l-utils-de.mo
+[8/60] Building translation v4l-utils-po/pt_BR/LC_MESSAGES/v4l-utils-pt_BR.mo
+[9/60] Building translation v4l-utils-po/uk/LC_MESSAGES/v4l-utils-uk.mo
+[10/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/jl2005bcd.c.o
+[11/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/jidctflt.c.o
+[12/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/jpeg.c.o
+[13/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/pac207.c.o
+[14/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/mr97310a.c.o
+[15/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/processing_gamma.c.o
+[16/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/cpia1.c.o
+[17/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/nv12_16l16.c.o
+[18/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/processing_autogain.c.o
+[19/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/processing_libv4lprocessing.c.o
+[20/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/crop.c.o
+[21/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/sn9c20x.c.o
+[22/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/processing_whitebalance.c.o
+[23/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/sn9c10x.c.o
+[24/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/flip.c.o
+[25/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/se401.c.o
+[26/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/sn9c2028-decomp.c.o
+[27/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/stv0680.c.o
+[28/60] Compiling C object lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o
+FAILED: lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o 
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc -Ilib/libv4l2/v4l2convert.so.p -Ilib/libv4l2 -I../lib/libv4l2 -I../lib/include -I../include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -Wpointer-arith -D_GNU_SOURCE -DPROMOTED_MODE_T=int -DENABLE_NLS -include /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/build/config.h -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -O2 -g0 -D_FORTIFY_SOURCE=1 -fPIC -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32 -D_LARGEFILE64_SOURCE -MD -MQ lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o -MF lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o.d -o lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o -c ../lib/libv4l2/v4l2convert.c
+In file included from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features.h:402,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/stdlib.h:26,
+                 from ../lib/libv4l2/v4l2convert.c:27:
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+   26 | #   error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+      |     ^~~~~
+[29/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/jpgl.c.o
+[30/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/sq905c.c.o
+[31/60] Compiling C object lib/libv4l2/libv4l2.so.0.0.0.p/log.c.o
+[32/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/spca501.c.o
+[33/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/control_libv4lcontrol.c.o
+[34/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/bayer.c.o
+[35/60] Compiling C object lib/libv4l2/libv4l2.so.0.0.0.p/v4l2-plugin.c.o
+[36/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/spca561-decompress.c.o
+[37/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/helper.c.o
+[38/60] Compiling C object lib/libv4l1/libv4l1.so.0.0.0.p/log.c.o
+[39/60] Compiling C object lib/libv4lconvert/ov511-decomp.p/ov511-decomp.c.o
+[40/60] Compiling C object lib/libv4lconvert/ov518-decomp.p/ov518-decomp.c.o
+[41/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/libv4lconvert.c.o
+[42/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/rgbyuv.c.o
+[43/60] Compiling C object lib/libv4l1/libv4l1.so.0.0.0.p/libv4l1.c.o
+[44/60] Compiling C object lib/libv4l2/libv4l2.so.0.0.0.p/libv4l2.c.o
+[45/60] Compiling C object lib/libv4lconvert/libv4lconvert.so.0.0.0.p/tinyjpeg.c.o
+ninja: build stopped: subcommand failed.
+make[1]: *** [package/pkg-generic.mk:289: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_built] Error 1
+make: *** [Makefile:83: _all] Error 2
+make: Leaving directory '/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot'

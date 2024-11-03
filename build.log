@@ -1,0 +1,32 @@
+make: Entering directory '/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot'
+[7m>>> libv4l 1.28.1 Building[27m
+GIT_DIR=. PATH="/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin:/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/sbin:/home/a/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"  PYTHONNOUSERSITE=y /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/ninja   -C /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build
+ninja: Entering directory `/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1//build'
+[1/10] Linking target lib/libv4l-mplane/libv4l-mplane.so
+[2/10] Linking target lib/libv4l2/libv4l2.so.0.0.0
+[3/10] Linking target lib/libv4l2rds/libv4l2rds.so.0.0.0
+[4/10] Compiling C object lib/libv4l1/v4l1compat.so.p/v4l1compat.c.o
+FAILED: lib/libv4l1/v4l1compat.so.p/v4l1compat.c.o 
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc -Ilib/libv4l1/v4l1compat.so.p -Ilib/libv4l1 -I../lib/libv4l1 -I../lib/include -I../include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -Wpointer-arith -D_GNU_SOURCE -DPROMOTED_MODE_T=int -DENABLE_NLS -include /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/build/config.h -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -O2 -g0 -D_FORTIFY_SOURCE=1 -fPIC -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32 -D_LARGEFILE64_SOURCE -MD -MQ lib/libv4l1/v4l1compat.so.p/v4l1compat.c.o -MF lib/libv4l1/v4l1compat.so.p/v4l1compat.c.o.d -o lib/libv4l1/v4l1compat.so.p/v4l1compat.c.o -c ../lib/libv4l1/v4l1compat.c
+In file included from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features.h:402,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/stdlib.h:26,
+                 from ../lib/libv4l1/v4l1compat.c:22:
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+   26 | #   error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+      |     ^~~~~
+[5/10] Compiling C object lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o
+FAILED: lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o 
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/bin/i686-buildroot-linux-gnu-gcc -Ilib/libv4l2/v4l2convert.so.p -Ilib/libv4l2 -I../lib/libv4l2 -I../lib/include -I../include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -Wpointer-arith -D_GNU_SOURCE -DPROMOTED_MODE_T=int -DENABLE_NLS -include /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/build/config.h -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -O2 -g0 -D_FORTIFY_SOURCE=1 -fPIC -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32 -D_LARGEFILE64_SOURCE -MD -MQ lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o -MF lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o.d -o lib/libv4l2/v4l2convert.so.p/v4l2convert.c.o -c ../lib/libv4l2/v4l2convert.c
+In file included from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features.h:402,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/stdlib.h:26,
+                 from ../lib/libv4l2/v4l2convert.c:27:
+/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+   26 | #   error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+      |     ^~~~~
+[6/10] Generating symbol file lib/libv4l2/libv4l2.so.0.0.0.p/libv4l2.so.0.0.0.symbols
+ninja: build stopped: subcommand failed.
+make[1]: *** [package/pkg-generic.mk:289: /home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot/output/build/libv4l-1.28.1/.stamp_built] Error 1
+make: *** [Makefile:83: _all] Error 2
+make: Leaving directory '/home/a/mycode/buildroot_libv4l_glibc_64bit_time/buildroot'

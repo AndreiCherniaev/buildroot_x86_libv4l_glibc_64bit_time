@@ -1,11 +1,11 @@
-How to build Linux image based on pc_x86_64_bios_defconfig but with 
+How to build Linux image based on qemu_x86_defconfig but with libv4l while glibc's BR2_TIME_BITS_64 is enabled.
 ## Compare with pc_x86_64_bios_defconfig
 Config [qemu_x86_libv4l_BR2_TIME_BITS_64_defconfig](my_external_tree/configs/qemu_x86_libv4l_BR2_TIME_BITS_64_defconfig) is based on [qemu_x86_defconfig](https://github.com/buildroot/buildroot/blob/e82217622ea4778148de82a4b77972940b5e9a9e/configs/qemu_x86_defconfig).
 
 ## Clone
 ```
-git clone --remote-submodules --recurse-submodules -j8 https://github.com/AndreiCherniaev/buildroot_libv4l_glibc_64bit_time.git
-cd buildroot_libv4l_glibc_64bit_time
+git clone --remote-submodules --recurse-submodules -j8 https://github.com/AndreiCherniaev/buildroot_x86_libv4l_glibc_64bit_time.git
+cd buildroot_x86_libv4l_glibc_64bit_time
 ```
 ## Make image
 ```
@@ -23,4 +23,10 @@ This code is based on emulation [script1](https://github.com/buildroot/buildroot
 ```
 qemu-system-i386 -M pc -drive file=output/images/disk.img,if=virtio,format=raw -net nic,model=virtio -net user
 ```
-Note: image file `Buildroot.img` is located outside of repo folder so we use `../`. Optionally add `-nographic` to see output not in extra screen but in console terminal. Or `-display curses` to pseudographic. 
+Note: image file `Buildroot.img` is located outside of repo folder so we use `../`. Optionally add `-nographic` to see output not in extra screen but in console terminal. Or `-display curses` to pseudographic.
+
+## Problems
+```
+output/host/i686-buildroot-linux-gnu/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+```
+see `build.log`
